@@ -10,6 +10,8 @@ Hammock is yet another HTTP client for Scala.  It tries to be typeful,
 purely functional, and work along other technologies that you're
 already using such as akka-http, circe, or cats.
 
+This is a (hopefully) temporary fork that adds support for cats-effect 3.
+
 ## Installation
 
 Add the following to your `build.sbt`.
