@@ -13,7 +13,14 @@ inThisBuild(
         "pepe@pepegar.com",
         url("https://pepegar.com")
       )
-    )
+    ),
+    publishTo := {
+      val artifactory = "https://itvrepos.jfrog.io/itvrepos/oasvc-ivy"
+      if (isSnapshot.value)
+        Some("Artifactory Realm" at artifactory)
+      else
+        Some("Artifactory Realm" at artifactory + ";build.timestamp=" + new java.util.Date().getTime)
+    },
   )
 )
 
